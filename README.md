@@ -15,7 +15,7 @@ For each of the datasets, there is an associated script that pre-processes the o
 
    a. <code>bbc_dataset.csv</code> - a comma-separated file consisting of an utterance ID, a tokenized utterance string, and binary-valued columns for each of the ten stances, with the obvious interpretation, and a final column indicating whether the utterance is in the 80\% training set, or the 20\% held-out test set.
    
-   b. <code>bbc_dataset_folds.csv</code> - a comma-separated file consisting of an utterance ID, and for each cv fold, a column indicating if the utterance is an item in the train or test set for that fold, for all the data in the 80\% training set (see a.).
+   b. <code>bbc_dataset_folds.csv</code> - a comma-separated file consisting of an utterance ID, and for each cv fold, a column indicating if the utterance is an item in the train or test set for that fold, for all the data in the training set (see a.).
    
    c. <code>bbc_elmo_train_embeddings.csv</code> - a comma-separated file consisting of an utterance ID and the vector representation of the ELMO embedding for the tokenized utterance, for all the utterances in the training set (see a.).
    
