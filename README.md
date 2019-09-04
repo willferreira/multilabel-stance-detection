@@ -13,7 +13,7 @@ For each of the datasets, there is an associated script that pre-processes the o
 
 1. The BBC - run the script <code>prepare_bbc_dataset.py</code> which looks for a file called <code>brexit_blog_corpus.xlsx</code> in the same directory as the script. The script does some data cleaning and pre-processing (tokenizing, generating ELMO embeddings) and saves the output to the same directory. The output consists of the following files:
 
-   a. <code>bbc_dataset.csv</code> - a comma-separated file consisting of a numeric utterance ID, a tokenized utterance string, and binary-valued columns for each of the ten stances, with the obvious meaning.
+   a. <code>bbc_dataset.csv</code> - a comma-separated file consisting of an utterance ID, a tokenized utterance string, and binary-valued columns for each of the ten stances, with the obvious interpretation.
    
    b. <code>
 
