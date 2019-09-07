@@ -37,5 +37,7 @@ For each of the datasets, there is an associated script that pre-processes the o
         vi. fold_i indicates whether the instance is in the train or test set for cv fold i in (1..5)
         
     d. generates a comma-separated file consisting of an ID and the vector representation of the ELMO embedding for the tokenized tweet
+    
+3. The MFTC - run the script <code>prepare_mftc_dataset.py</code> which looks for a file called <code>MFTC_V3_Text.json</code> in the same directory as the script. The script requires an argument <code>--corpus \<corpus name\></code> where <code>corpus name</code> is one of <code>ALM, Baltimore, BLM, Davidson, Election, MeToo</code> or <code>Sandy</code>.
 
 
