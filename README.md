@@ -24,7 +24,9 @@ For each of the datasets, there is an associated script that pre-processes the o
 2. The ETC - run the script <code>prepare_tweet_dataset.py</code> which looks for a file called <code>all_data_tweet_text.csv</code> in the same directory as the script. The script splits the data in the file into the three target pairs: Donald Trump - Hilary Clinton (DT_HC), Donald Trump - Ted Cruz (DT_TC), and Hilary Clinton - Bernie Sanders (HC_BS). For each target pair the script:
 
     a. combines the Train and Dev sets to produce a single train set, and keeps the existing test set as a hold-out test set,
+    
     b. splits the new training set into five train/test folds,
+    
     c. generates a new comma-separated file for each target pair called tweet-x.csv, where x in \{DT_HC, DT_TC, HC_BS\}, the columns are: ID, Tweet, Target 1, Target 2, Test/Train/Dev, set, fold_1, fold_2, fold_3, fold_4, fold_5, and:
     
         i. Tweet is the tokenized tweet,
