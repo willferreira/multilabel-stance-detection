@@ -20,5 +20,7 @@ For each of the datasets, there is an associated script that pre-processes the o
    c. <code>bbc_elmo_train_embeddings.csv</code> - a comma-separated file consisting of an utterance ID and the vector representation of the ELMO embedding for the tokenized utterance, for all the utterances in the training set (see a.).
    
    d. <code>bbc_elmo_test_embeddings.csv</code> - a comma-separated file consisting of an utterance ID and the vector representation of the ELMO embedding for the tokenized utterance, for all the utterances in the test set (see a.).
+   
+2. The ETC - 
 
 
