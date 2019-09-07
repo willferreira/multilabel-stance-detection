@@ -32,9 +32,9 @@ For each of the datasets, there is an associated script that pre-processes the o
         i. Tweet is the tokenized tweet,
         ii. Target 1 is the first target stance (e.g. FOR)
         iii. Target 2 is the second target stance (e.g. AGAINST)
-        iv. Test/Train/Dev is the original set
-        v. set is the new set (i.e. train or test)
-        vi. fold_i indicates whether the instance is in the train or test set for that cv fold
+        iv. Test/Train/Dev is the original set designator
+        v. set is the new set (i.e. train or test) designator
+        vi. fold_i indicates whether the instance is in the train or test set for cv fold i in (1..5)
         
     d. generates a comma-separated file consisting of an ID and the vector representation of the ELMO embedding for the tokenized tweet
 
