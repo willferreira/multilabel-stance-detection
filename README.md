@@ -21,6 +21,19 @@ For each of the datasets, there is an associated script that pre-processes the o
    
    d. <code>bbc_elmo_test_embeddings.csv</code> - a comma-separated file consisting of an utterance ID and the vector representation of the ELMO embedding for the tokenized utterance, for all the utterances in the test set (see a.).
    
-2. The ETC - 
+2. The ETC - run the script <code>prepare_tweet_dataset.py</code> which looks for a file called <code>all_data_tweet_text.csv</code> in the same directory as the script. The script splits the data in the file into the three target pairs: Donald Trump - Hilary Clinton (DT_HC), Donald Trump - Ted Cruz (DT_TC), and Hilary Clinton - Bernie Sanders (HC_BS). For each target pair the script:
+
+    a. combines the Train and Dev sets to produce a single train set, and keeps the existing test set as a hold-out test set,
+    b. splits the new training set into five train/test folds,
+    c. generates a new comma-separated file for each target pair called tweet-x.csv, where x in \{DT_HC, DT_TC, HC_BS\}, the columns are: ID, Tweet, Target 1, Target 2, Test/Train/Dev, set, fold_1, fold_2, fold_3, fold_4, fold_5, and:
+    
+        i. Tweet is the tokenized tweet,
+        ii. Target 1 is the first target stance (e.g. FOR)
+        iii. Target 2 is the second target stance (e.g. AGAINST)
+        iv. Test/Train/Dev is the original set
+        v. set is the new set (i.e. train or test)
+        vi. fold_i indicates whether the instance is in the train or test set for that cv fold
+        
+    d. generates a comma-separated file consisting of an ID and the vector representation of the ELMO embedding for the tokenized tweet
 
 
