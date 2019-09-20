@@ -42,6 +42,6 @@ For each of the datasets, there is an associated script that pre-processes the o
    
       <code>python prepare_mftc_dataset.py --corpus ALM</code>
    
-   prepares the data for the ALM dataset of the corpus. This generates two files: <code>moral-dataset-ALM.csv</code> and <code>moral-        dataset-ALM_elmo_embeddings.csv</code>. The first file is comma-separated with columns ID, Tweet, set, fold_1, fold_2, fold_3, fold_4,    fold_5, where set is train or hold-out test set, and fold_i indicates whether the tweet is in the train or test set for fold i.
+   prepares the data for the ALM dataset of the corpus, and generates two files: <code>moral-dataset-ALM.csv</code> and <code>moral-          dataset-ALM_elmo_embeddings.csv</code>. The first file is comma-separated with columns: ID, Tweet, set, fold_1, fold_2, fold_3, fold_4,    fold_5, where Tweet is the tokenized tweet text, set indicates whether the tweet is in the train or hold-out test set, and fold_i          indicates whether the tweet is in the train or test set for fold i.
 
 
