@@ -40,8 +40,8 @@ For each of the datasets, there is an associated script that pre-processes the o
     
 3. The MFTC - run the script <code>prepare_mftc_dataset.py</code> which looks for a file called <code>MFTC_V3_Text.json</code> in the same directory as the script. The script requires an argument <code>--corpus \<corpus name\></code> where <code>corpus name</code> is one of <code>ALM, Baltimore, BLM, Davidson, Election, MeToo</code> or <code>Sandy</code>. For example:
    
-   <code>python prepare_mftc_dataset.py --corpus ALM</code>
+      <code>python prepare_mftc_dataset.py --corpus ALM</code>
    
-   prepares the data for the ALM dataset of the corpus.
+   prepares the data for the ALM dataset of the corpus. This generates two files: <code>moral-dataset-ALM.csv</code> and <code>moral-        dataset-ALM_elmo_embeddings.csv</code>. The first file is comma-separated with columns ID, Tweet, set, fold_1, fold_2, fold_3, fold_4,    fold_5, where set is train or hold-out test set, and fold_i indicates whether the tweet is in the train or test set for fold i.
 
 
