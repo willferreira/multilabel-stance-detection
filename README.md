@@ -42,6 +42,6 @@ For each of the datasets, there is an associated script that pre-processes the o
    
    <code>python prepare_mftc_dataset.py --corpus ALM</code>
    
-prepares the data for the ALM dataset of the corpus.
+   prepares the data for the ALM dataset of the corpus.
 
 
