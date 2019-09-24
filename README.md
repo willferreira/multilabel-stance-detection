@@ -56,8 +56,8 @@ For each of the datasets, there is an associated script that pre-processes the o
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
 ## Running the models
-The script <code>run_cv.py</code> is used to run the various models against the different datasets. The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name<code>. There are three learning algorithms: 
-
+The script <code>run_cv.py</code> is used to run the various models against the different datasets. The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name<code>. There are three learning algorithms:
+   
     FastText (FT), 
     Multi-task Learning (MTL - referred to as mlp in the code), and 
     Logistic Regression (LR - to be compatible with the model in the BBC paper),
@@ -68,5 +68,5 @@ four models:
     binary-relevance (BR), 
     power-set (LP), and 
     cross-label-dependency (XLD)
-   
+    
 and three datasets, however, not all algorithm/model /dataset combinations are permissable.
