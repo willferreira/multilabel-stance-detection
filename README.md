@@ -9,9 +9,9 @@ The paper explores methods of performing multilabel stance detection with refere
 
 3. The Moral Foundation Twitter Corpus (MFTC): Morteza Dehghani, Joseph Hoover, Gwenyth Portillo-Wightman, Leigh Yeh, Shreya Havaldar, Ying Lin,Aida  M  Davani,  Brendan  Kennedy,   MohammadAtari,  Zahra Kamel,  and et al. 2019.   Moral foundations twitter corpus.
 
-The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/):
+The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/), for example:
 
-  <code>conda create --name emnlp_2019_multilabel anaconda</code>
+   <code>conda create --name emnlp_2019_multilabel anaconda</code>
 
 For each of the datasets, there is an associated script that pre-processes the original dataset to be used in the code:
 
