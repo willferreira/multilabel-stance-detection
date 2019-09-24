@@ -38,6 +38,7 @@ For each of the datasets, there is an associated script that pre-processes the o
     b. splits the new training set into five train/test folds,
     
     c. generates a new comma-separated file for each target pair called tweet-x.csv, where x in \{DT_HC, DT_TC, HC_BS\}, the columns are: ID, Tweet, Target 1, Target 2, Test/Train/Dev, set, fold_1, fold_2, fold_3, fold_4, fold_5, and:
+    
        i. Tweet is the tokenized tweet,
        ii. Target 1 is the first target stance (e.g. FOR)
        iii. Target 2 is the second target stance (e.g. AGAINST)
@@ -48,6 +49,7 @@ For each of the datasets, there is an associated script that pre-processes the o
     d. generates a comma-separated file consisting of an ID and the vector representation of the ELMO embedding for the tokenized tweet
     
 3. The MFTC - run the script <code>prepare_mftc_dataset.py</code> which looks for a file called <code>MFTC_V3_Text.json</code> in the same directory as the script. The script requires an argument <code>--corpus \<corpus name\></code> where <code>corpus name</code> is one of <code>ALM, Baltimore, BLM, Davidson, Election, MeToo</code> or <code>Sandy</code>. For example:
+   
       <code>python prepare_mftc_dataset.py --corpus ALM</code>
    
    prepares the data for the ALM dataset of the corpus, and generates two files: <code>moral-dataset-ALM.csv</code> and <code>moral-          dataset-ALM_elmo_embeddings.csv</code>. The first file is comma-separated with columns: ID, Tweet, set, fold_1, fold_2, fold_3, fold_4,    fold_5, where Tweet is the tokenized tweet text, set indicates whether the tweet is in the train or hold-out test set, and fold_i          indicates whether the tweet is in the train or test set for fold i. The second file contains the ELMO embeddings for the tweets,
@@ -55,11 +57,13 @@ For each of the datasets, there is an associated script that pre-processes the o
 
 ## Running the models
 The script <code>run_cv.py</code> is used to run the various models against the different datasets. The script has a number of parameters, but the main one is <code>--model-name</code>. There are three learning algorithms: 
+
     FastText (FT), 
     Multi-task Learning (MTL - referred to as mlp in the code), and 
     Logistic Regression (LR - to be compatible with the model in the BBC paper). 
    
-There are four models: 
+There are four models:
+
     base, 
     binary-relevance (BR), 
     power-set (LP), and 
