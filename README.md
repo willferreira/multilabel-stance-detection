@@ -9,7 +9,9 @@ The paper explores methods of performing multilabel stance detection with refere
 
 3. The Moral Foundation Twitter Corpus (MFTC): Morteza Dehghani, Joseph Hoover, Gwenyth Portillo-Wightman, Leigh Yeh, Shreya Havaldar, Ying Lin,Aida  M  Davani,  Brendan  Kennedy,   MohammadAtari,  Zahra Kamel,  and et al. 2019.   Moral foundations twitter corpus.
 
-The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/).
+The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/):
+
+    <code>conda create --name emnlp_2019_multilabel anaconda</code>
 
 For each of the datasets, there is an associated script that pre-processes the original dataset to be used in the code:
 
@@ -31,12 +33,12 @@ For each of the datasets, there is an associated script that pre-processes the o
     
     c. generates a new comma-separated file for each target pair called tweet-x.csv, where x in \{DT_HC, DT_TC, HC_BS\}, the columns are: ID, Tweet, Target 1, Target 2, Test/Train/Dev, set, fold_1, fold_2, fold_3, fold_4, fold_5, and:
     
-        i. Tweet is the tokenized tweet,
-        ii. Target 1 is the first target stance (e.g. FOR)
-        iii. Target 2 is the second target stance (e.g. AGAINST)
-        iv. Test/Train/Dev is the original set designator
-        v. set is the new set (i.e. train or test) designator
-        vi. fold_i indicates whether the instance is in the train or test set for cv fold i in (1..5)
+        1. Tweet is the tokenized tweet,
+        2. Target 1 is the first target stance (e.g. FOR)
+        3. Target 2 is the second target stance (e.g. AGAINST)
+        4. Test/Train/Dev is the original set designator
+        5. set is the new set (i.e. train or test) designator
+        6. fold_i indicates whether the instance is in the train or test set for cv fold i in (1..5)
         
     d. generates a comma-separated file consisting of an ID and the vector representation of the ELMO embedding for the tokenized tweet
     
