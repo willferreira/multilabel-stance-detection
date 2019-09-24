@@ -104,6 +104,9 @@ venv.bak/
 .mypy_cache/
 
 # data files
-*.csv
-*.xlsx
+moral-dataset*.csv
+tweets*.csv
+bbc_dataset*.csv
 MFTC_V3_Text.json
+brexit_blog_corpus.xlsx
+all_data_tweet_text.csv
