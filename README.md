@@ -1,6 +1,7 @@
 # multilabel-stance-detection-public
 Public version of the code for the EMNLP 2019 paper: "Incorporating Label Dependencies in Multilabel Stance Detection" by William Ferreira and Andreas Vlachos.
 
+## Data Preparation
 The paper explores methods of performing multilabel stance detection with reference to three multilabel datasets. The datasets cannot be provided with this code due to licensing conditions, and should be requested from the relevant authors:
 
 1. The Brexit Blog Corpus (BBC): Vasiliki  Simaki,  Carita  Paradis,  and  Andreas  Kerren.2017.   Stance classification in texts from blogs onthe 2016 british referendum. In SPECOM.
@@ -54,4 +55,4 @@ For each of the datasets, there is an associated script that pre-processes the o
    prepares the data for the ALM dataset of the corpus, and generates two files: <code>moral-dataset-ALM.csv</code> and <code>moral-          dataset-ALM_elmo_embeddings.csv</code>. The first file is comma-separated with columns: ID, Tweet, set, fold_1, fold_2, fold_3, fold_4,    fold_5, where Tweet is the tokenized tweet text, set indicates whether the tweet is in the train or hold-out test set, and fold_i          indicates whether the tweet is in the train or test set for fold i. The second file contains the ELMO embeddings for the tweets,
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
-
+## Running the models
