@@ -11,7 +11,7 @@ The paper explores methods of performing multilabel stance detection with refere
 
 The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/):
 
-    <code>conda create --name emnlp_2019_multilabel anaconda</code>
+  <code>conda create --name emnlp_2019_multilabel anaconda</code>
 
 For each of the datasets, there is an associated script that pre-processes the original dataset to be used in the code:
 
