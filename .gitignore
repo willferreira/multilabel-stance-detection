@@ -116,3 +116,4 @@ tweets*.csv
 # mftc
 MFTC_V3_Text.json
 moral-dataset*.csv
+moral_stance_annotations*.csv
