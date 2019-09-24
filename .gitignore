@@ -104,9 +104,15 @@ venv.bak/
 .mypy_cache/
 
 # data files
-moral-dataset*.csv
-tweets*.csv
-bbc_dataset*.csv
-MFTC_V3_Text.json
+# bbc
 brexit_blog_corpus.xlsx
+bbc_dataset*.csv
+bbc_elmo*.csv
+
+# US election
 all_data_tweet_text.csv
+tweets*.csv
+
+# mftc
+MFTC_V3_Text.json
+moral-dataset*.csv
