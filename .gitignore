@@ -106,8 +106,7 @@ venv.bak/
 # data files
 # bbc
 brexit_blog_corpus.xlsx
-bbc_dataset*.csv
-bbc_elmo*.csv
+bbc*.csv
 
 # US election
 all_data_tweet_text.csv
@@ -115,5 +114,4 @@ tweets*.csv
 
 # mftc
 MFTC_V3_Text.json
-moral-dataset*.csv
-moral_stance_annotations*.csv
+moral*.csv
