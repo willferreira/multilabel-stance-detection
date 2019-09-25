@@ -56,9 +56,9 @@ For each of the datasets, there is an associated script that pre-processes the o
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
 ## Running the models
-The script <code>run_cv.py</code> is used to run the various models against the different datasets. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. Not all combinations of algorithm, encoding method, loss function and dataset are valid.
+The script <code>run_cv.py</code> is used to run the various models against the different datasets. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. 
 
-The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
+The main script parameters are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
 #### --model-name
     mlp-base                     - MTL model with binary cross-entropy loss
