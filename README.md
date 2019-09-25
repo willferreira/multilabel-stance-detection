@@ -17,6 +17,7 @@ The code in this repo is written in Python 3.7.x. To run the code, we suggest yo
 In addition to the packages that come with anaconda, you will need:
 
    <code>conda install -c conda-forge tensorflow-hub</code>
+   <code>conda install -c conda-forge keras</code>
    
 
 For each of the datasets, there is an associated script that pre-processes the original dataset to be used in the code:
@@ -72,3 +73,9 @@ The main script parameters are <code>--model-name</code> and <code>--dataset-nam
     bbc              - BBC dataset
     tweets-X         - ETC dataset, X in {DT_HC, DT_TC, HC_BS}
     moral-dataset-X  - MFTC dataset, X in {ALM, BLM, Baltimore, Davidson, Election, MeToo, Sandy}
+    
+To run a specific model-name/dataset-name combination, for example, mlp-base and bbc run the following command:
+
+    <code>python run_cv.py --model-name mlp-base --dataset-name bbc
+    
+
