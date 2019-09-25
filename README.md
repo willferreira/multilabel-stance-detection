@@ -62,7 +62,7 @@ The script has a number of parameters, but the main ones are <code>--model-name<
 
 #### --model-name
     mlp-base                     - MTL model with binary cross-entropy loss
-    mlp-powerset                 - MTL model with label power-set encoding of the labels and categorial cross-entropy loss
+    mlp-powerset                 - MTL model with label power-set encoding and categorical cross-entropy loss
     mlp-cross-label-dependency   - MTL model with cross-label dependency loss
     lr-binary-relevance          - Logistic regression model with binary relevance encoding
     lr-powerset                  - Logistic regression model with label power-set encoding
