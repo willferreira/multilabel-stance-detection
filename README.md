@@ -60,8 +60,4 @@ The script <code>run_cv.py</code> is used to run the various models against the 
 
 The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
-### model-name
-
-
-
-The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name</code>. 
+#### --model-name
