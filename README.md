@@ -77,7 +77,7 @@ The main script parameters are <code>--model-name</code> and <code>--dataset-nam
     tweets-X         - ETC dataset, X in {DT_HC, DT_TC, HC_BS}
     moral-dataset-X  - MFTC dataset, X in {ALM, BLM, Baltimore, Davidson, Election, MeToo, Sandy}
     
-To run a specific model-name/dataset-name combination, for example, mlp-base and bbc run the following command:
+To run a specific model-name/dataset-name combination, for example, <code>mlp-base</code> and <code>bbc</code>, run the following command:
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
     
