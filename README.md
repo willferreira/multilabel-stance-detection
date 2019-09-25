@@ -20,6 +20,8 @@ In addition to the packages that come with anaconda, you will need:
    
    <code>conda install -c conda-forge keras</code>
    
+You will also need an installation of the FastText binary appropriate for your environment (see https://fasttext.cc/docs/en/support.html). The code in this repo predates the availability of the official FastText for Python library, and so uses the official binary version through a bespoke wrapper. Once the FastText binary is installed, you will need to set the environment variable <code>FASTTEXT_HOME</code> to point to the folder/dir containing the binary.
+   
 
 For each of the datasets, there is an associated script that pre-processes the original dataset to be used in the code:
 
