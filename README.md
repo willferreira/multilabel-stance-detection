@@ -56,7 +56,7 @@ For each of the datasets, there is an associated script that pre-processes the o
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
 ## Running the models
-The script <code>run_cv.py</code> is used to run the various models against the different datasets. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL), and Logistic Regression (LR); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the US Election tweet dataset, and the MFTC datasets are split into sub-datasets. Not all combinations of algorithm, encoding method, loss function and dataset are valid.
+The script <code>run_cv.py</code> is used to run the various models against the different datasets. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the US Election tweet dataset, and the MFTC datasets are split into sub-datasets. Not all combinations of algorithm, encoding method, loss function and dataset are valid.
 
 The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
@@ -64,7 +64,11 @@ The script has a number of parameters, but the main ones are <code>--model-name<
     mlp-base                     - MTL model with binary cross-entropy loss
     mlp-powerset                 - MTL model with label power-set encoding and categorical cross-entropy loss
     mlp-cross-label-dependency   - MTL model with cross-label dependency loss
-    lr-binary-relevance          - Logistic regression model with binary relevance encoding
-    lr-powerset                  - Logistic regression model with label power-set encoding
+
     fasttext-binary-relevance    - Fasttext model with binary relevance encoding
     fasttext-powerset            - Fasttext model with label power-set encoding
+
+#### --dataset-name
+    bbc              - BBC dataset
+    tweets-X         - US Election tweets dataset, X in {DT_HC, DT_TC, HC_BS}
+    moral-dataset-X  - MFTC dataset, X in {ALM, BLM, Baltimore, Davidson, Election, MeToo, Sandy}
