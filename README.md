@@ -17,6 +17,7 @@ The code in this repo is written in Python 3.7.x. To run the code, we suggest yo
 In addition to the packages that come with anaconda, you will need:
 
    <code>conda install -c conda-forge tensorflow-hub</code>
+   
    <code>conda install -c conda-forge keras</code>
    
 
