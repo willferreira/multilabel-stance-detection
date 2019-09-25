@@ -61,10 +61,10 @@ The script <code>run_cv.py</code> is used to run the various models against the 
 The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
 #### --model-name
-    mlp-base 
-    mlp-powerset
-    mlp-cross-label-dependency
-    lr-binary-relevance
-    lr-powerset
-    fasttext-binary-relevance
-    fasttext-powerset
+    mlp-base                     - MTL model with binary cross-entropy loss
+    mlp-powerset                 - MTL model with label power-set encoding of the labels and categorial cross-entropy loss
+    mlp-cross-label-dependency   - MTL model with cross-label dependency loss
+    lr-binary-relevance          - Logistic regression model with binary relevance encoding
+    lr-powerset                  - Logistic regression model with label power-set encoding
+    fasttext-binary-relevance    - Fasttext model with binary relevance encoding
+    fasttext-powerset            - Fasttext model with label power-set encoding
