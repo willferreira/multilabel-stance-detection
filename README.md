@@ -61,3 +61,11 @@ The script <code>run_cv.py</code> is used to run the various models against the 
 The script has a number of parameters, but the main ones are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
 #### --model-name
+   mlp-base 
+   mlp-powerset
+   mlp-cross-label-dependency
+   lr-binary-relevance
+   lr-powerset
+   fasttext-binary-relevance
+   fasttext-powerset
+                  'fasttext-binary-relevance', 'fasttext-powerset', 'all', 'all-lr', 'all-fasttext', 'all-mlp'
