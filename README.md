@@ -76,6 +76,6 @@ The main script parameters are <code>--model-name</code> and <code>--dataset-nam
     
 To run a specific model-name/dataset-name combination, for example, mlp-base and bbc run the following command:
 
-    <code>python run_cv.py --model-name mlp-base --dataset-name bbc
+    <code>python run_cv.py --model-name mlp-base --dataset-name bbc</code>
     
 
