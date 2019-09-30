@@ -84,7 +84,7 @@ To run a specific model-name/dataset-name combination, for example, <code>mlp-ba
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
     
-The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_<model-name>_<dataset-name>.pkl</code> 
+The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_\<model-name\>_\<dataset-name\>.pkl</code> 
 
     
 
