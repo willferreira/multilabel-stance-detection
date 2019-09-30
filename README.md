@@ -84,15 +84,23 @@ To run a specific model-name/dataset-name combination, for example, <code>mlp-ba
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
     
-The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_\<model-name\>_\<dataset-name\>.pkl</code>. The pickle file contains a Python dict with the following keys:
+The output from the script is written to a sub-dir/folder called <code>results</code>, and is a pickle file with the name <code>cv_results_\<model-name\>_\<dataset-name\>.pkl</code>. The pickle file contains a Python dict with the following keys:
    
    'cv_results' - <code>sklearn.model_selection.GridSearchCV.cv_results_</code>
+   
    'best_params' - <code>sklearn.model_selection.GridSearchCV.best_params</code>
+   
    'best_score' - <code>sklearn.model_selection.GridSearchCV.best_score</code>
+   
    'y_test' - holdout test set labels
-   'y_pred' - predicted holdout test set labels using model trained on best cv params
+   
+   'y_pred' - predicted labels using holdout test set data and model trained on best cv params
+   
    'model_name' - model name
+   
    'dataset_name' - dataset name
+   
+The Jupyter lab file <code>cv_results_analysis.ipynb</code> is a convenience script that unpacks the pickle files and dispays the results for each of the models for a given dataset. To run the script set the <code>dataset_key</code> variable in the third cell to one of: <code>'moral', 'bbc'</code> or <code>'tweet'</code>.
 
     
 
