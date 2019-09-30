@@ -4,11 +4,11 @@ Public version of the code for the EMNLP 2019 paper: "Incorporating Label Depend
 ## Data Preparation
 The paper explores methods of performing multilabel stance detection with reference to three multilabel datasets. The datasets cannot be provided with this code due to licensing conditions, and should be requested from the relevant authors:
 
-1. The Brexit Blog Corpus (BBC): Vasiliki  Simaki,  Carita  Paradis,  and  Andreas  Kerren.2017.   Stance classification in texts from blogs onthe 2016 british referendum. In SPECOM.
+1. The Brexit Blog Corpus (BBC): Vasiliki  Simaki,  Carita  Paradis,  and  Andreas  Kerren.2017. Stance classification in texts from blogs on the 2016 British referendum. In SPECOM 2017.
 
 2. US Election Twitter Corpus (ETC): Parinaz  Sobhani,  Diana  Inkpen,  and  Xiaodan  Zhu.2019.   Exploring  deep  neural  networks  for  multi-target stance detection. Computational Intelligence, 35(1):82–97.
 
-3. The Moral Foundation Twitter Corpus (MFTC): Morteza Dehghani, Joseph Hoover, Gwenyth Portillo-Wightman, Leigh Yeh, Shreya Havaldar, Ying Lin,Aida  M  Davani,  Brendan  Kennedy, MohammadAtari,  Zahra Kamel,  and et al. 2019. Moral foundations twitter corpus.
+3. Hoover, J., Portillo-Wightman, G., Yeh, L., Havaldar, S., Davani, A. M., Lin, Y., … Dehghani, M. (2019, April 10). Moral Foundations Twitter Corpus: A collection of 35k tweets annotated for moral sentiment. https://doi.org/10.31234/osf.io/w4f72
 
 The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/), for example:
 
