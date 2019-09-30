@@ -84,10 +84,10 @@ To run a specific model-name/dataset-name combination, for example, <code>mlp-ba
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
     
-### BBC Models
+#### BBC Models
 
-### ETC Models
+#### ETC Models
 
-### MFTC Models
+#### MFTC Models
     
 
