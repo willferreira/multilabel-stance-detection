@@ -63,7 +63,7 @@ Run the script <code>prepare_mftc_dataset.py</code> which looks for a file calle
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
 ## Model Estimation and Cross-validation
-The script <code>run_cv.py</code> is used to run the various models against the different datasets, using cross-validation to explore the model parameter space. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. 
+The script <code>run_cv.py</code> is used to run the various models against the different datasets, using cross-validation to explore the model parameter space. The cv parameter ranges are stored in the <code>models</code> variable in the script. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. 
 
 The main script parameters are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
@@ -84,7 +84,15 @@ To run a specific model-name/dataset-name combination, for example, <code>mlp-ba
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
     
-The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_\<model-name\>_\<dataset-name\>.pkl</code> 
+The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_\<model-name\>_\<dataset-name\>.pkl</code>. The pickle file contains a Python dict with the following keys:
+   
+   'cv_results' - <code>sklearn.model_selection.GridSearchCV.cv_results_</code>
+   'best_params' - <code>sklearn.model_selection.GridSearchCV.best_params</code>
+   'best_score' - <code>sklearn.model_selection.GridSearchCV.best_score</code>
+   'y_test' - holdout test set labels
+   'y_pred' - predicted holdout test set labels using model trained on best cv params
+   'model_name' - model name
+   'dataset_name' - dataset name
 
     
 
