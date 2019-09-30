@@ -70,7 +70,7 @@ The main script parameters are <code>--model-name</code> and <code>--dataset-nam
 #### --model-name
     mlp-base                     - MTL model with binary cross-entropy loss
     mlp-powerset                 - MTL model with label power-set encoding and categorical cross-entropy loss
-    mlp-cross-label-dependency   - MTL model with cross-label dependency loss
+    mlp-cross-label-dependency   - MTL model with combined binary cross-entropy and cross-label dependency loss
 
     fasttext-binary-relevance    - Fasttext model with binary relevance encoding
     fasttext-powerset            - Fasttext model with label power-set encoding
