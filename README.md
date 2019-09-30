@@ -63,7 +63,7 @@ Run the script <code>prepare_mftc_dataset.py</code> which looks for a file calle
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
 ## Running the models
-The script <code>run_cv.py</code> is used to run the various models against the different datasets. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. 
+The script <code>run_cv.py</code> is used to run the various models against the different datasets, using cross-validation to explore the model parameter space. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. 
 
 The main script parameters are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
 
@@ -83,6 +83,8 @@ The main script parameters are <code>--model-name</code> and <code>--dataset-nam
 To run a specific model-name/dataset-name combination, for example, <code>mlp-base</code> and <code>bbc</code>, run the following command:
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
+    
+The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_<model-name>_<dataset-name>.pkl</code> 
     
 #### BBC Models
 
