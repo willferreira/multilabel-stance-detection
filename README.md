@@ -62,7 +62,7 @@ Run the script <code>prepare_mftc_dataset.py</code> which looks for a file calle
    prepares the data for the ALM dataset of the corpus, and generates two files: <code>moral-dataset-ALM.csv</code> and <code>moral-          dataset-ALM_elmo_embeddings.csv</code>. The first file is comma-separated with columns: ID, Tweet, set, fold_1, fold_2, fold_3, fold_4,    fold_5, where Tweet is the tokenized tweet text, set indicates whether the tweet is in the train or hold-out test set, and fold_i          indicates whether the tweet is in the train or test set for fold i. The second file contains the ELMO embeddings for the tweets,
    keyed by ID. Repeat running the script for the remaining datasets: Baltimore, BLM, ..., Sandy.
 
-## Running the models
+## Model Estimation and Cross-validation
 The script <code>run_cv.py</code> is used to run the various models against the different datasets, using cross-validation to explore the model parameter space. There are various combinations of learning algorithm: FastText (FT), Multi-task Learning (MTL); data encoding methods: Binary-relevance (BR), Label power-set (LP); and loss functions: Binary Cross-entropy, Cross-label dependency (XLD). There are also three datasets, where in addition, the ETC and MFTC datasets are split into sub-datasets. 
 
 The main script parameters are <code>--model-name</code> and <code>--dataset-name</code>, where the model-name and dataset-name can take the following values:
@@ -85,11 +85,6 @@ To run a specific model-name/dataset-name combination, for example, <code>mlp-ba
     python run_cv.py --model-name mlp-base --dataset-name bbc
     
 The output from the script is written to a sub-dir/folder called <coe>results</code>, and is a pickle file with the name <code>cv_results_<model-name>_<dataset-name>.pkl</code> 
-    
-#### BBC Models
 
-#### ETC Models
-
-#### MFTC Models
     
 
