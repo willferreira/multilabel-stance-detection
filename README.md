@@ -6,9 +6,9 @@ The paper explores methods of performing multilabel stance detection with refere
 
 1. The Brexit Blog Corpus (BBC): Vasiliki  Simaki,  Carita  Paradis,  and  Andreas  Kerren.2017.   Stance classification in texts from blogs onthe 2016 british referendum. In SPECOM.
 
-2. US Election Twitter Corpus (ETC): Parinaz  Sobhani,  Diana  Inkpen,  and  Xiaodan  Zhu.2019.   Exploring  deep  neural  networks  for  multi-target stance detection.Computational Intelligence,35(1):82–97.
+2. US Election Twitter Corpus (ETC): Parinaz  Sobhani,  Diana  Inkpen,  and  Xiaodan  Zhu.2019.   Exploring  deep  neural  networks  for  multi-target stance detection. Computational Intelligence, 35(1):82–97.
 
-3. The Moral Foundation Twitter Corpus (MFTC): Morteza Dehghani, Joseph Hoover, Gwenyth Portillo-Wightman, Leigh Yeh, Shreya Havaldar, Ying Lin,Aida  M  Davani,  Brendan  Kennedy,   MohammadAtari,  Zahra Kamel,  and et al. 2019.   Moral foundations twitter corpus.
+3. The Moral Foundation Twitter Corpus (MFTC): Morteza Dehghani, Joseph Hoover, Gwenyth Portillo-Wightman, Leigh Yeh, Shreya Havaldar, Ying Lin,Aida  M  Davani,  Brendan  Kennedy, MohammadAtari,  Zahra Kamel,  and et al. 2019. Moral foundations twitter corpus.
 
 The code in this repo is written in Python 3.7.x. To run the code, we suggest you create a Python virtual environment using the Anaconda Python platform (https://www.anaconda.com/), for example:
 
@@ -25,7 +25,8 @@ You will also need an installation of the FastText binary appropriate for your e
 
 For each of the datasets, there is an associated script that pre-processes the original dataset to be used in the code:
 
-1. The BBC - run the script <code>prepare_bbc_dataset.py</code> which looks for a file called <code>brexit_blog_corpus.xlsx</code> in the same directory as the script. The script does some data cleaning and pre-processing (tokenizing, generating ELMO embeddings) and saves the output to the same directory. The output consists of the following files:
+#### BBC Dataset 
+Run the script <code>prepare_bbc_dataset.py</code> which looks for a file called <code>brexit_blog_corpus.xlsx</code> in the same directory as the script. The script does some data cleaning and pre-processing (tokenizing, generating ELMO embeddings) and saves the output to the same directory. The output consists of the following files:
 
    a. <code>bbc_dataset.csv</code> - a comma-separated file consisting of an utterance ID, a tokenized utterance string, and binary-valued columns for each of the ten stances, with the obvious interpretation, and a final column indicating whether the utterance is in the 80\% training set, or the 20\% held-out test set.
    
@@ -35,7 +36,8 @@ For each of the datasets, there is an associated script that pre-processes the o
    
    d. <code>bbc_elmo_test_embeddings.csv</code> - a comma-separated file consisting of an utterance ID and the vector representation of the ELMO embedding for the tokenized utterance, for all the utterances in the test set (see a.).
    
-2. The ETC - run the script <code>prepare_tweet_dataset.py</code> which looks for a file called <code>all_data_tweet_text.csv</code> in the same directory as the script. The script splits the data in the file into the three target pairs: Donald Trump - Hilary Clinton (DT_HC), Donald Trump - Ted Cruz (DT_TC), and Hilary Clinton - Bernie Sanders (HC_BS). For each target pair the script:
+#### ETC Dataset 
+Run the script <code>prepare_tweet_dataset.py</code> which looks for a file called <code>all_data_tweet_text.csv</code> in the same directory as the script. The script splits the data in the file into the three target pairs: Donald Trump - Hilary Clinton (DT_HC), Donald Trump - Ted Cruz (DT_TC), and Hilary Clinton - Bernie Sanders (HC_BS). For each target pair the script:
 
     a. combines the Train and Dev sets to produce a single train set, and keeps the existing test set as a hold-out test set,
     
@@ -52,7 +54,8 @@ For each of the datasets, there is an associated script that pre-processes the o
         
     d. generates a comma-separated file consisting of an ID and the vector representation of the ELMO embedding for the tokenized tweet
     
-3. The MFTC - run the script <code>prepare_mftc_dataset.py</code> which looks for a file called <code>MFTC_V3_Text.json</code> in the same directory as the script. The script requires an argument <code>--corpus \<corpus name\></code> where <code>corpus name</code> is one of <code>ALM, Baltimore, BLM, Davidson, Election, MeToo</code> or <code>Sandy</code>. For example:
+#### MFTC Dataset
+Run the script <code>prepare_mftc_dataset.py</code> which looks for a file called <code>MFTC_V3_Text.json</code> in the same directory as the script. The script requires an argument <code>--corpus \<corpus name\></code> where <code>corpus name</code> is one of <code>ALM, Baltimore, BLM, Davidson, Election, MeToo</code> or <code>Sandy</code>. For example:
    
       <code>python prepare_mftc_dataset.py --corpus ALM</code>
    
@@ -80,5 +83,11 @@ The main script parameters are <code>--model-name</code> and <code>--dataset-nam
 To run a specific model-name/dataset-name combination, for example, <code>mlp-base</code> and <code>bbc</code>, run the following command:
 
     python run_cv.py --model-name mlp-base --dataset-name bbc
+    
+### BBC Models
+
+### ETC Models
+
+### MFTC Models
     
 
