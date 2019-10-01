@@ -102,5 +102,7 @@ The output from the script is written to a sub-dir/folder called <code>results</
    
 The Jupyter lab file <code>cv_results_analysis.ipynb</code> is a convenience script that unpacks the pickle files and dispays the results for each of the best models for a given dataset, when run on the holdout test set. To run the script set the <code>dataset_key</code> variable in the third cell to one of: <code>'bbc', 'tweet'</code> or <code>'moral'</code>, for the BBC, ETC and MFTC datasets, respectively. For the BBC and MFTC datasets, the script calculates the usual metrics of accuracy, F1, precision, recall, and also Jaccard (as described in the paper). For the ETC dataset, the script calculates the F1 macro-averaged score for the FOR and AGAINST labels, as described in https://www.aclweb.org/anthology/E17-2088. In addition, the script calculates the average scores for each model across the different sub datasets, where appropriate (ETC \& MFTC).
 
-    
+## Model Bootstrapping
+
+Section 5.1 of the paper looks at the distribution of scores when the MTL models with their best parameters, as chosen by cross-validation, are estimated on boostrapped samples of the training data.
 
