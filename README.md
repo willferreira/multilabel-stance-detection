@@ -112,4 +112,4 @@ Section 5.1 of the paper looks at the distribution of scores when the MTL models
    
    c. --dataset-name - the dataset name, e.g. bbc, tweets-DT_HC, etc. (default=moral-dataset-MeToo)
 
-The output of the script is saved in a pickle file called <code>bootstrap_results_\<dataset-name\>.pkl</code> in the <code>results/</code> dir/folder.
+The output of the script is saved in a pickle file called <code>bootstrap_results_\<dataset-name\>.pkl</code> in the <code>results/</code> dir/folder. The Jupyter lab file <code>bootstrap_analysis.ipynb</code> is used to analyse and display the results of the bootstrapping output. To analyse a particular set of results, set the variable name <code>dataset_name</code> to a dataset name, e.g. <code>moral-dataset-MeToo</code> and run all the cells. The lab code extracts the bootstrap results and displays summary statistics of the bootstrap samples, KDE plots of the results and the Welch test statistics.
