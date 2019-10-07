@@ -122,4 +122,4 @@ Section 5.2 of the paper looks at how the performance of MTL-XLD and MTL-LP comp
    
    b. --dataset-name - the dataset name, e.g. bbc, moral-dataset-MeToo, etc. (default=moral-dataset-MeToo)
    
-The script output is in the form of a pickle file called <code>training_size_bootstrap_\<dataset-name\>.pkl</code> in the <code>results/</code> dir/folder.
+The script output is in the form of a pickle file called <code>training_size_bootstrap_\<dataset-name\>.pkl</code> in the <code>results/</code> dir/folder. The Jupyter lab file <code>training_size_bootstrap_analysis.ipynb</code> is used to analyse and display the results of the learning curve experiment output. To analyse a particular set of results, set the variable name <code>dataset_name</code> to a dataset name, e.g. <code>moral-dataset-MeToo</code> and run all the cells.
