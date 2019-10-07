@@ -104,7 +104,7 @@ The Jupyter lab file <code>cv_results_analysis.ipynb</code> is a convenience scr
 
 ## Model Bootstrapping
 
-Section 5.1 of the paper looks at the distribution of scores when the MTL models with their best parameters, as chosen by cross-validation, are estimated on bootstrapped samples of the training data. The bootstrap is done using the script <code>run_mlp_model_boostrap.py</code> which has the following parameters:
+Section 5.1 of the paper looks at the distribution of scores when the MTL models with their best parameters, as chosen by cross-validation, are estimated on bootstrapped samples of the data. The bootstrap is done using the script <code>run_mlp_model_boostrap.py</code> which has the following parameters:
 
    a. --n-samples - the number of samples to bootstrap (default=30)
    
